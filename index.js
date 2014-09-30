@@ -4,5 +4,6 @@
 function indexFunc(){
     if(console!==undefined){
         console.log("Hello World");
+        alert("Hello Alert");
     }
 }
