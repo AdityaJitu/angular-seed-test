@@ -3,7 +3,8 @@
  */
 angular.module('myApp.controller',[]).
 controller('homeCtrl',['$log','$scope',function($log, $scope){
-        $log.info("you are inside homeCtrl");
+//        $log.info("you are inside homeCtrl");
         $scope.fname="Aditya";
         $scope.lname="padhi";
+        $scope.gender;
     }]);

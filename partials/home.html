@@ -1,8 +1,14 @@
 <div>
     <h2 style="color: green">This is home Ctrl</h2>
 
-<input type="text" ng-model="lname"/>
-<input type="text" ng-model="fname"/>
+    <input type="text" ng-model="lname"/>
     <hr>
-    <inputbox name="fname" lname="{{lname}}" derp="{{lname}}"></inputbox>
+    <div inputbox></div>
+    <hr>
+    <!--Enter sometext here:-<input type="text" ng-model="$parent.model"/>-->
+    <h2>This is for outside isolated model</h2>
+    <input type="text" outsideisolatedmodel ng-model="outer.model"/>{{outer.model}}
+    <h2>This is for outside model</h2>
+    <input type="text" outsidemodel ng-model="model1"/>{{outer.model1}}
+
 </div>
