@@ -1,0 +1,23 @@
+<div>
+
+    <h2>Hello Welcome to Tech Mahindra</h2>
+    <h2>This is for including Dynamic Template</h2>
+    <p>Hello Welcome here!!!!!</p>
+    <dynamic-template template='hometemplate.html'></dynamic-template>
+
+    <h2>This is a approach to include ng-model inside the template of a directive.  The scope is isolated in this case:-</h2>
+    <div dirinsidemodel>
+
+    <h2>This is for transcluding the stuff</h2>
+        <input type="text" ng-model="derp.bar" placeholder="Enter bar here"/>
+    </div>
+
+    <button ng-click="clickme($event)">CLick Here for Demo</button>
+    Enter Range here:- <input type="text" ng-model="range" />
+    <ul>
+        <li ng-repeat="name in col(countries,range)|orderBy:'id':false">{{name.id}}</li>
+    </ul>
+
+
+    <time-duration></time-duration>
+</div>

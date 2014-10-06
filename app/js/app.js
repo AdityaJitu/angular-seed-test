@@ -1,7 +1,7 @@
 /**
  * Created by Aditya on 02-10-2014.
  */
-angular.module('myApp',['ngRoute','myApp.controller','myApp.directive']).
+angular.module('myApp',['ngRoute','myApp.controller','myApp.directive','myApp.services']).
     config(['$routeProvider',function($routeProvider){
         $routeProvider.when('/view1',{
             templateUrl:'partials/home.html',
