@@ -1,0 +1,16 @@
+{
+  "name": "angular-seed-test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/AdityaJitu/angular-seed-test",
+  "authors": [
+    "Aditya Padhi <adityapadhi2010@yahoo.in>"
+  ],
+  "description": "angular-seed-test for karma",
+  "license": "MIT",
+  "private": true,
+    "dependencies":{
+    "angular":"1.2.7",
+        "angular-route":"1.2.7",
+        "angular-mocks":"1.2.7"
+    }
+}
