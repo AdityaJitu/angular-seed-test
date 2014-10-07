@@ -1,6 +1,7 @@
 /**
  * Created by Aditya on 02-10-2014.
  */
+'use strict';
 angular.module('myApp.controller', []).
 controller('homeCtrl', ['$log', '$scope', '$filter', '$injector',
     function ($log, $scope, $filter, $injector) {
