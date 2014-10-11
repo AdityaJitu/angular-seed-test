@@ -47,11 +47,21 @@ directive('dynamicTemplate', [
 
         };
 
-}]).directive('timeDuration',[function(){
+}]).directive('timeDuration',[function(){//directive to test for ngmodelcontroller
     return{
         restrict:'AEC',
       template:'<div>Enter Time Here:-<input type="text" ng-model="num" size="50" width="30"/></div>'
 
+    };
+
+}]).directive('tabledirective',[function(){
+    return{
+        template:'<table></table>',
+        link:function(scope, element, attr){
+            var child=element.children();
+            
+        }
+    
     };
 
 }]);
