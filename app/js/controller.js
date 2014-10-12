@@ -74,7 +74,8 @@ controller('MainController', ['$scope', '$injector',
  //        }
         $scope.fname = "Derp";
         $scope.sayHello = function () {
-            $scope.greeting = "Hello World";
+            $scope.greetig = "Hello World";
+            $scope.fname="Aditya Padhi";
         };
 
 }]);
