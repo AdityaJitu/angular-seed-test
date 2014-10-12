@@ -54,14 +54,12 @@ directive('dynamicTemplate', [
 
     };
 
-}]).directive('tabledirective',[function(){
-    return{
-        template:'<table></table>',
-        link:function(scope, element, attr){
-            var child=element.children();
-            
+}]).directive('clickColorChange',['$log',function($log){
+        return{
+            transclude:true,
+            template:'<div><div>This is sibbling 1</div><div>This is sibbling 2</div></div>',
+            link:function(scope, element, attr){
+                $log.info("Welcome to clickColorChange");
+            }
         }
-    
-    };
-
-}]);
+    }]);
