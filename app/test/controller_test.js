@@ -10,10 +10,12 @@ describe('Unit: MainController', function () {
     }));
 
     it('should create $scope.greeting when calling sayHello', function () {
-        expect(scope.greeting).toBeUndefined();
+        expect(scope.greeting).toBe(undefined);
         // expect(scope.greetingService).toBeDefined();
         scope.sayHello();
         expect(scope.greeting).toBe('Hello World');
+        expect(scope.fname).not.toBe('Aditya Padi');
+        expect(scope.fname).not.toBe(undefined);
 
     });
 })
