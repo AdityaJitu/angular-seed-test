@@ -10,7 +10,6 @@ On 17-10-2014
 
 I was able to install bower components.
 
-
 Action Pan
 ==========
 
