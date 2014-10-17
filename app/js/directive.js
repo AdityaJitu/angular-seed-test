@@ -5,6 +5,7 @@
 angular.module('myApp.directive', []).
 
 directive('dynamicTemplate', [
+
     function () {
         return {
             templateUrl: function (telem, tattr) {
@@ -17,6 +18,7 @@ directive('dynamicTemplate', [
             }
         };
 }]).directive('dirinsidemodel', [
+
     function () {
         return {
             restrict: 'AEC',
@@ -27,39 +29,49 @@ directive('dynamicTemplate', [
             },
             link: function (scope, elem, attr) {
                 var input = elem.find('input');
-
-                console.log(input.eq(1));
                 scope.$watch('foo', function () {
                     console.log("foo is being watched");
                 });
-
                 scope.$watch(function () {
                     return input.eq(1).val();
-
                 }, function (newVal, oldVal) {
                     console.log("the new Val is " + newVal);
                     console.log("the old val is " + oldVal);
                     console.log("bar is being watched !!!");
                 });
-
             }
+        };
 
+}]).directive('timeDuration', [
+    function () { //directive to test for ngmodelcontroller
+        return {
+            restrict: 'AEC',
+            template: '<div>Enter Time Here:-<input type="text" ng-model="num" size="50" width="30"/></div>'
 
         };
 
-}]).directive('timeDuration',[function(){//directive to test for ngmodelcontroller
-    return{
-        restrict:'AEC',
-      template:'<div>Enter Time Here:-<input type="text" ng-model="num" size="50" width="30"/></div>'
-
-    };
-
-}]).directive('clickColorChange',['$log',function($log){
-        return{
-            transclude:true,
-            template:'<div><div>This is sibbling 1</div><div>This is sibbling 2</div></div>',
-            link:function(scope, element, attr){
+}]).directive('clickColorChange', ['$log',
+    function ($log) {
+        return {
+            replace:true,
+            restrict: 'AEC',
+           
+            template: '<div><div><button ng-click="changeColor()">{{buttontext}}</button></div></div>',
+//            template:'<div><div>{{buttontext}}</div></div>',
+            link: function (scope, element, attr) {
+                scope.buttontext="Click Here";
                 $log.info("Welcome to clickColorChange");
+                scope.changeColor = function () {
+                    var buttonElem = element.find('button');
+                    var button = buttonElem.eq(0);
+                    if (button.parent().hasClass('divclass')) {
+                        button.parent().removeClass('divclass');
+                    } else {
+                        button.parent().addClass('divclass');
+                    }
+                    
+                    scope.buttontext = "Hello World";
+                };
             }
-        }
+        };
     }]);
