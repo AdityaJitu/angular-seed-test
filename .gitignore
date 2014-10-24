@@ -11,3 +11,7 @@
 .idea/workspace.xml
 npm-debug.log
 app/data.json
+/app/nbproject/private/
+.idea/selfseedproject.iml
+app/nbproject/project.properties
+app/nbproject/project.xml

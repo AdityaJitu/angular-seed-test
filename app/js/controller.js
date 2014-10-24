@@ -6,7 +6,6 @@ angular.module('myApp.controller', []).
 controller('homeCtrl', ['$log', '$scope', '$filter', '$injector','demoService',
     function($log, $scope, $filter, $injector,demoService) {
         //        $log.info("you are inside homeCtrl");
-        alert("This is controller");
         demoService.sayHello();
         $scope.fname = "Aditya";
         $scope.lname = "padhi";
@@ -41,13 +40,16 @@ controller('homeCtrl', ['$log', '$scope', '$filter', '$injector','demoService',
         //greeting.getgreeting();
         var myFn = function(greeting) {
             greeting.getgreeting();
-            
+
         };
         $injector.invoke(myFn);
         $scope.clickme = myFn;
         $scope.sayName = function() {
             $scope.greeting = "Hello " + $scope.fname;
         };
+
+        //initialising the value of rating for using it into outerdirmodel
+        $scope.rating=42;
     }
 ]).
 controller('MainController', ['$scope', '$injector',

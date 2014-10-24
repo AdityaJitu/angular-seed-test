@@ -1,27 +1,26 @@
-<div>
-
-    <h2>Hello Welcome to Tech Mahindra</h2>
-    <h2>This is for including Dynamic Template</h2>
-    <p>Hello Welcome here!!!!!</p>
-    <dynamic-template template='hometemplate.html'></dynamic-template>
-
+    <div>
     <h2>This is a approach to include ng-model inside the template of a directive.  The scope is isolated in this case:-</h2>
-    <div dirinsidemodel>
+        <div dirinsidemodel>
 
-    <h2>This is for transcluding the stuff</h2>
-        <input type="text" ng-model="derp.bar" placeholder="Enter bar here"/>
-    </div>
+        <h2>This is for transcluding the stuff</h2>
+            <input type="text" ng-model="derp.bar" placeholder="Enter bar here"/>
+        </div>
 
-    <button ng-click="clickme($event)">CLick Here for Demo</button>
-    Enter Range here:- <input type="text" ng-model="range" />
-    <ul>
-        <li ng-repeat="name in col(countries,range)|orderBy:'id':false">{{name.id}}</li>
-    </ul>
+        <button ng-click="clickme($event)">CLick Here for Demo</button>
+        Enter Range here:- <input type="text" ng-model="range" />
+        <ul>
+            <li ng-repeat="name in col(countries,range)|orderBy:'id':false">{{name.id}}</li>
+        </ul>
 
 
-    <time-duration></time-duration>
-    <hr>
-    <h2>This is clickcolorchange</h2>
-    <click-color-change></click-color-change>
-    
-</div>
+        <time-duration></time-duration>
+        <hr>
+        <h2>This is clickcolorchange1</h2>
+        <click-color-change></click-color-change>
+        <hr>
+        <h2>Let us look for outer directives</h2>
+        <div outerdirmodel ng-model="rating"/>
+        <h2>This is a demo of Parsers.  hmm</h2>
+        <parserdirective add="2+2"/>
+        
+        </div>
