@@ -36,3 +36,5 @@ So if you want to show **Date** output in any format say **dd/mm/yyyy** then it 
 ####Important:
 *Model to view converion is done by the **$formatters** .
 *View to model is done by the **$parsers** .
+
+> Updated 23:21 PM.
