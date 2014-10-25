@@ -34,5 +34,5 @@ ngModelController
 So if you want to show **Date** output in any format say **dd/mm/yyyy** then it would be best to use **$render**
 
 ####Important:
-*Model to view converion is done by the **$formatters**
-*View to model is done by the **$parsers**
+*Model to view converion is done by the **$formatters** .
+*View to model is done by the **$parsers** .
