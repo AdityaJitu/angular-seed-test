@@ -1,6 +1,6 @@
 # angular-seed-test
 
-this is test project not for production
+this is test project not for production.
 Think before you use it.
 
 ### This line is for h3 markup
@@ -36,3 +36,5 @@ So if you want to show **Date** output in any format say **dd/mm/yyyy** then it 
 ####Important:
 *Model to view converion is done by the **$formatters** .
 *View to model is done by the **$parsers** .
+
+> Again starting to work on 23:21.
