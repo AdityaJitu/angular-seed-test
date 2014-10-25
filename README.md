@@ -15,7 +15,6 @@ Action Pan
 
 Write test cases for directives
 
-h1. ToDO 
 
 Look for information like how to write test case when service is injected in the controller
 Pratice to write test case for controller
