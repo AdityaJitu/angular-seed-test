@@ -12,7 +12,7 @@ I was able to install bower components.
 Action Pan
 ==========
 
-Write test cases for directives
+Write test cases fo0 directives
 
 To Do
 -----
@@ -37,4 +37,4 @@ So if you want to show **Date** output in any format say **dd/mm/yyyy** then it 
 *Model to view converion is done by the **$formatters** .
 *View to model is done by the **$parsers** .
 
-> On 26-10-2014 at 00:22 hrs
+> On 26-10-2014 at 09:23 hrs
