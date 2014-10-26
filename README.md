@@ -25,12 +25,15 @@ Pratice to write test case for controller
 ngModelController
 =================
 
-**We have to use ngModelController if you want to grab hold of a ngModel which is used as an attributes of a custom directive.  This is a controller of 
+**We have to use ngModelController if you want to grab hold of a ngModel which is used as an attributes of a custom directive.  This is a controller of **ngModel**
 
 ### ngModelController.$render() :
 
 * It is responsible to update the view.
 * This is called when the value of $modelValue & $viewValue are different.  Actually it's work is to change the value of raw **$modelValue** to usable **$viewValue**.
+* So basically the flow would be from model-to-view.
+* Takes care by calling the **$formatters** pipeline.
+
 So if you want to show **Date** output in any format say **dd/mm/yyyy** then it would be best to use **$render**
 
 ####Important:
@@ -38,3 +41,8 @@ So if you want to show **Date** output in any format say **dd/mm/yyyy** then it 
 *View to model is done by the **$parsers** .
 
 > On 26-10-2014 at 09:23 hrs
+
+### ngModelController.$setViewValue():
+
+* It is called when we want to update our model from our view.  
+* This is view-to-model flow & it takes care by calling the **$parsers** pipeline.
