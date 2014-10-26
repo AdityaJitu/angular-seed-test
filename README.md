@@ -46,3 +46,11 @@ So if you want to show **Date** output in any format say **dd/mm/yyyy** then it 
 
 * It is called when we want to update our model from our view.  
 * This is view-to-model flow & it takes care by calling the **$parsers** pipeline.
+
+
+#Notes for reference
+
+* [Markdown basics on Wikipaedia](http://en.wikipedia.org/wiki/Markdown)
+* [Markdown-basics on GitHub](https://help.github.com/articles/markdown-basics)
+* [Markdown-CheatSheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [GitHub Flavored MarkDown](https://help.github.com/articles/github-flavored-markdown/)

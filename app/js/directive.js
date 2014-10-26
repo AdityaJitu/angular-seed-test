@@ -85,28 +85,25 @@
                 template: '{{name()}}'
             };
         }]).directive('outerdirmodel', [
+
         function () {
             return {
                 restrict: 'AEC',
                 scope: {},
                 require: 'ngModel',
-                template: '<button ng-click="decrement()">-</button><div>{{value}}</div><button ng-click="increment()">+</button>',
+                template: '<button ng-click="decrement()">-</button><input type="text" /><button ng-click="increment()">+</button>',
                 link: function (scope, elem, attr, ngModelController) {
-
-                    //scope.value = 0; //initialising the value of the model
-                    
-
+                    var inputElem = elem.find('input').eq(0);
                     //updating model to view
                     ngModelController.$render = function () {
-                        elem.find('div').text(ngModelController.$viewValue);
-
+                        inputElem.val(ngModelController.$viewValue);
                     };
 
                     function updateModel(offset) {
-                        ngModelController.$setViewValue(ngModelController.$viewValue + offset); //updating the model
+                        ngModelController.$setViewValue(parseInt(ngModelController.$viewValue) + offset); //updating the model
                         ngModelController.$render();
                     }
-                    
+
                     scope.decrement = function () {
                         updateModel(-1);
                     };
@@ -114,6 +111,14 @@
                     scope.increment = function () {
                         updateModel(+1);
                     };
+
+                    inputElem.on('blur keyup change', function () {
+                        scope.$apply(function(){
+                            ngModelController.$setViewValue(inputElem.val());
+                        ngModelController.$render();
+                        });
+                        
+                    });
 
                 }
             };
