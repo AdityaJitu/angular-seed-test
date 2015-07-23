@@ -7,7 +7,7 @@
   ],
   "description": "angular-seed-test for karma",
   "license": "MIT",
-  "private": true,
+  "private": false,
     "dependencies":{
     "angular":"1.2.7",
         "angular-route":"1.2.7",
